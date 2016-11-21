@@ -100,6 +100,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
+	[] execVM "addons\statusBar\statusbar.sqf";           // Status Bar
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
 
