@@ -102,6 +102,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\stickyCharges\init.sqf";
 	[] execVM "addons\statusBar\statusbar.sqf";           // Status Bar
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";  // AIRDROP
+	[] execVM "addons\scripts\intro.sqf";                 //INTRO MENSSAGE
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
 
