@@ -106,6 +106,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\scripts\HvT.sqf";                   // High Value Target
     [] execVM "addons\scripts\HvD.sqf";                   // High Value Drugrunner
 	[] execVM "addons\ToxicGasGrenades\initGrenades.sqf"; // Toxic Gas Grenades
+	[] execVM "addons\ScarCode\sRestartWarnings.sqf";     // Mensagem de Restart
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
 
