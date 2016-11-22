@@ -108,6 +108,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\ToxicGasGrenades\initGrenades.sqf"; // Toxic Gas Grenades
 	[] execVM "addons\ScarCode\sRestartWarnings.sqf";     // Mensagem de Restart
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";		  // Keypad for vehicle locking
+	[] execVM "addons\laptop\init.sqf";                   // Addon for hack laptop mission
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
 
