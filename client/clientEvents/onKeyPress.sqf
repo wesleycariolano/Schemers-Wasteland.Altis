@@ -53,6 +53,56 @@ switch (true) do
 			["You've taken out your earplugs.", 5] call mf_notify_client;
 		};
 	};
+	
+		// 1000m - 1 Key
+	case (_key in A3W_customKeys_1000m):
+	{
+			setViewDistance 1000; setObjectViewDistance 900; setTerrainGrid 3.125;
+			["Visão ajustada a 1000 metros.", 5] call mf_notify_client;
+	};
+
+		// 2000m - 2 Key
+	case (_key in A3W_customKeys_2000m):
+	{
+			setViewDistance 2000; setObjectViewDistance 1750; setTerrainGrid 3.125;
+			["Visão ajustada a 2000 metros.", 5] call mf_notify_client;
+	};
+
+		// 3000m - 3 Key
+	case (_key in A3W_customKeys_3000m):
+	{
+			setViewDistance 3000; setObjectViewDistance 2500; setTerrainGrid 3.125;
+			["Visão ajustada a 3000 metros.", 5] call mf_notify_client;
+	};
+
+		// 4000m - 4 Key
+	case (_key in A3W_customKeys_4000m):
+	{
+			setViewDistance 4000; setObjectViewDistance 3000; setTerrainGrid 3.125;
+			["Visão ajustada a 4000 metros.", 5] call mf_notify_client;
+	};	
+	// Emergency Eject - Del Key
+	case (_key in A3W_customKeys_forceEject):
+	{	
+		[-9, false, true, ""] execVM "client\actions\forceEject.sqf";
+	};
+	
+	// Holster - unholster weapon (H key)
+	case (_key in A3W_customKeys_unholsterWeapon):
+	{
+		if (vehicle player == player && currentWeapon player != "") then
+		{
+			curWep_h = currentWeapon player;
+			player action ["SwitchWeapon", player, player, 100];
+		}
+		else
+		{
+			if (curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then
+			{
+				player selectWeapon curWep_h;
+			};
+		};
+	};
 };
 
 // ********** Action keys **********
@@ -95,11 +145,11 @@ if (!_handled && _key in actionKeys "GetOut") then
 	{
 		if (_ctrl && {_veh isKindOf 'Air' && !(_veh isKindOf 'ParachuteBase')}) then
 		{
-			[] spawn
+			/*[] spawn
 			{
 				if !(["Are you sure you want to eject?", "Confirm", true, true] call BIS_fnc_guiMessage) exitWith {};
 				[[], fn_emergencyEject] execFSM "call.fsm";
-			};
+			};*/
 		};
 	};
 };
@@ -132,16 +182,6 @@ if (!_handled && _key in (actionKeys "UavView" + actionKeys "UavViewToggle")) th
 	if (["A3W_disableUavFeed"] call isConfigOn) then
 	{
 		_handled = true;
-	};
-};
-
-// Override prone reload freeze (ffs BIS)
-if (!_handled && _key in (actionKeys "MoveDown" + actionKeys "MoveUp")) then
-{
-	if ((toLower animationState player) find "reloadprone" != -1) then
-	{
-		[player, format ["AmovPknlMstpSrasW%1Dnon", [player, true] call getMoveWeapon]] call switchMoveGlobal;
-		reload player;
 	};
 };
 
