@@ -27,8 +27,6 @@
 			removeBackpack _player;
 			removeAllWeapons _player;
 			_player addBackpack "B_FieldPack_blk";
-			_player addMagazine "1Rnd_HE_Grenade_shell";
-			_player addMagazine "1Rnd_HE_Grenade_shell";
 			//_player addMagazine "20Rnd_556x45_UW_mag";
 			//_player addMagazine "20Rnd_556x45_UW_mag";
 			//_player addMagazine "20Rnd_556x45_UW_mag";
