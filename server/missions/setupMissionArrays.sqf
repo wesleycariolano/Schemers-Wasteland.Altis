@@ -14,7 +14,6 @@ MainMissions =
 	["mission_ArmedDiversquad", 0.5],
 	["mission_Coastal_Convoy", 0.8],
 	["mission_Convoy", 1],
-	//["mission_HostileHeliFormation", 0.1],
 	["mission_APC", 0.8],
 	["mission_LightArmVeh", 0.5],
 	["mission_ArmedHeli", 0.8],
@@ -25,13 +24,10 @@ MainMissions =
 
 SideMissions =
 [
-	//["mission_HostileHelicopter", 0.1],
-	//["mission_MiniConvoy", 1],
 	["mission_SunkenSupplies", 0.5],
 	["mission_TownInvasion", 1.5],
 	["mission_AirWreck", 1.5],
 	["mission_WepCache", 1.5],
-	//["mission_Outpost", 1.8],
 	["mission_Truck", 0.5],
 	["mission_GeoCache", 0.8],
 	["mission_Sniper", 1],
@@ -42,15 +38,13 @@ SideMissions =
 MoneyMissions =
 [
 	["mission_MoneyShipment", 1.3],
-	["mission_SunkenTreasure", 0.3],
-	//["mission_drugsRunners", 0.8],
-	//["mission_Roadblock", 1.2],
-	["mission_Hackers", 0.7]
+	["mission_SunkenTreasure", 0.3]
+	//["mission_Hackers", 0.7]
 ];
 
 hostileairMissions = 
 [
-	//["mission_Gunship", 1],
+	["mission_Gunship", 1],
 	["mission_HostileHelicopter", 1],
 	["mission_HostileHeliFormation", 1],
 	["mission_HostileJet", 1.2],
@@ -65,7 +59,7 @@ extraMissions =
 	["mission_Convoy", 1],
 	["mission_ConvoyCSATSF", 0.9],
 	["mission_ConvoyNATOSF", 0.8],
-	["mission_HackLaptop", 1.5],
+	//["mission_HackLaptop", 1.5],
 	["mission_MiniConvoy", 0.8]
 	
 ];

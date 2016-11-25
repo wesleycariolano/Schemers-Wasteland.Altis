@@ -11,7 +11,7 @@ private [ "_box1", "_barGate", "_bunker1", "_bunker2", "_obj1", "_obj2", "_drop_
 
 _setupVars =
 {
-	_missionType = "MST";
+	_missionType = "Falsa Blitz";
 	_locationsArray = RoadblockMissionMarkers;
 };
 
@@ -37,9 +37,9 @@ _setupObjects =
 	{ _x setVariable ["allowDamage", false, true] } forEach [_obj1, _obj2, _barGate, _bunker1, _bunker2];
 
 	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup,_missionPos,8,12] call createCustomGroup3;
+	[_aiGroup,_missionPos,8,12] call createCustomGroup;
 	
-	_missionHintText = format ["Manifestantes do movimento sem-terra bloquearam uma <t color='%1'>Rodovia</t> e estão armados e com drogas! Detê-los e recuperar quaisquer Drogas e Armas! Cuidado com o LULA!", sideMissionColor]
+	_missionHintText = format ["Traficantes estão se passando por policiais e fizeram uma <t color='%1'>Blitz Falsa,</t> eles estão armados e com drogas! Vão lá e acabem com essa baderna", sideMissionColor]
 };
 
 _waitUntilMarkerPos = nil;
@@ -117,7 +117,7 @@ _successExec =
 		_cash1 setVariable ["owner", "world", true];
 	};
   
-	_successHintMessage = format ["O bloqueio foi quebrado. Tchau Lula!"];
+	_successHintMessage = format ["                        Falsa Blitz desmantelada, traficantes eliminados, drogas e armas apreendidas!"];
 };
 
 _this call sideMissionProcessor;

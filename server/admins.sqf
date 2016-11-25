@@ -35,13 +35,14 @@ else
 	// High Administrators: manage & spectate players, remove hacked vehicles, show player tags
 	highAdmins = compileFinal str
 	[
-		"76561198108476185" // Anderson
+		"76561198108456183" // Anderson
 	];
 
 	// Server Owners: access to everything, including god mode, money, guns, and vehicles
 	serverOwners = compileFinal str
 	[
-	  	"76561198137181441" // Wesley Cariolano
+	  	"76561198137181441", // Wesley Cariolano
+		"76561198108476185"  // Anderson
 	];
 
 	/********************************************************/
