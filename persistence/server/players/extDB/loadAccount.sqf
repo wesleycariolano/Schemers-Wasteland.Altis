@@ -10,6 +10,8 @@ params ["_UID", "_player"];
 private ["_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
 
 private _moneySaving = ["A3W_moneySaving"] call isConfigOn;
+private _donatorEnabled = ["A3W_donatorEnabled"] call isConfigOn;
+private _tkAutoSwitchEnabled = ["A3W_tkAutoSwitchEnabled"] call isConfigOn;
 private _crossMap = ["A3W_extDB_playerSaveCrossMap"] call isConfigOn;
 private _environment = ["A3W_extDB_Environment", "normal"] call getPublicVar;
 private _mapID = call A3W_extDB_MapID;
@@ -129,6 +131,8 @@ else
 
 private _bank = 0;
 private _bounty = 0;
+private _donatorLevel = 0;
+private _teamKiller = 0;
 private _bountyKills = [];
 
 if (_moneySaving) then
@@ -136,6 +140,20 @@ if (_moneySaving) then
 	_result = ["getPlayerBankMoney:" + _UID, 2] call extDB_Database_async;
 
 	_bank = _result param [0,0];
+};
+
+if (_donatorEnabled) then
+{
+	_result = ["getPlayerDonatorLevel:" + _UID, 2] call extDB_Database_async;
+	
+	_donatorLevel = _result param [0,0];
+};
+
+if (_tkAutoSwitchEnabled) then
+{
+	_result = ["getPlayerTeamKiller:" + _UID, 2] call extDB_Database_async;
+
+	_teamKiller = _result param [0,0];
 };
 
 if (["A3W_atmBounties"] call isConfigOn) then
@@ -150,6 +168,8 @@ _data append
 [
 	["BankMoney", _bank],
 	["Bounty", _bounty],
+	["DonatorLevel", _donatorLevel],
+	["TeamKiller", _teamKiller],
 	["BountyKills", _bountyKills]
 ];
 

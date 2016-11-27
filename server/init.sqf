@@ -151,6 +151,7 @@ if (isServer) then
 		"A3W_townSpawnCooldown",
 		"A3W_survivalSystem",
 		"A3W_extDB_GhostingAdmins",
+		"A3W_donatorEnabled",
 		"A3W_extDB_SaveUnlockedObjects",
 		"A3W_hcPrefix",
 		"A3W_hcObjCaching",

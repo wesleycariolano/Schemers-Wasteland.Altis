@@ -71,6 +71,8 @@ A3W_fnc_checkPlayerFlag =
 				switch (_var) do
 				{
 					case "BankMoney":    { _player setVariable ["bmoney", _val, true] };
+					case "DonatorLevel":    { _player setVariable ["donatorLevel", _val, true] };
+					case "TeamKiller":    { _player setVariable ["teamkiller", _val, true] };
 					case "Bounty":       { _player setVariable ["bounty", _val, true] };
 					case "BountyKills":  { _player setVariable ["bountyKills", _val, true] };
 				};
