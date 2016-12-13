@@ -52,7 +52,7 @@ if (_uid call isAdmin) then
 					["A3W_teleport", "onMapSingleClick",
 					{
 						vehicle player setPos _pos;
-						if (!isNil "notifyAdminMenu") then { ["teleport", _pos] spawn notifyAdminMenu };
+						//if (!isNil "notifyAdminMenu") then { ["teleport", _pos] spawn notifyAdminMenu };
 						["A3W_teleport", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 						true
 					}] call BIS_fnc_addStackedEventHandler;
@@ -62,7 +62,7 @@ if (_uid call isAdmin) then
 				{
 					_money = 5000;
 					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
-					if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
+					//if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
 				};
 				case 6: //Debug Menu
 				{

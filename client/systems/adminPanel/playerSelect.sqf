@@ -48,7 +48,7 @@ if (_uid call isAdmin) then
 					if (!([player] call camera_enabled)) then
 					{
 						[] call camera_toggle;
-						["PlayerMgmt_Spectate", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+						["PlayerMgmt_Spectate", format ["%1 (%2)", name _target, getPlayerUID _target]];
 					};
 
 					[player, _target] call camera_attach_to_target;
@@ -70,7 +70,7 @@ if (_uid call isAdmin) then
 			_warnText = ctrlText _warnMessage;
 			_playerName = name player;
 			[format ["Message from Admin: %1", _warnText], "A3W_fnc_titleTextMessage", _target, false] call A3W_fnc_MP;
-			["PlayerMgmt_Warn", format ["%1 (%2) - %3", name _target, getPlayerUID _target, _warnText]] call notifyAdminMenu;
+			["PlayerMgmt_Warn", format ["%1 (%2) - %3", name _target, getPlayerUID _target, _warnText]];
 		};
 		case 2: //Slay
 		{
@@ -80,19 +80,19 @@ if (_uid call isAdmin) then
 				_target setDamage 1;
 			};
 
-			["PlayerMgmt_Slay", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["PlayerMgmt_Slay", format ["%1 (%2)", name _target, getPlayerUID _target]];
 		};
 		case 3: //Unlock Team Switcher
 		{
 			pvar_teamSwitchUnlock = getPlayerUID _target;
 			publicVariableServer "pvar_teamSwitchUnlock";
-			["PlayerMgmt_UnlockTeamSwitch", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["PlayerMgmt_UnlockTeamSwitch", format ["%1 (%2)", name _target, getPlayerUID _target]];
 		};
 		case 4: //Unlock Team Killer
 		{
 			pvar_teamKillUnlock = getPlayerUID _target;
 			publicVariableServer "pvar_teamKillUnlock";
-			["PlayerMgmt_UnlockTeamKill", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["PlayerMgmt_UnlockTeamKill", format ["%1 (%2)", name _target, getPlayerUID _target]];
 		};
 		case 5: //Remove All Money
 		{
@@ -103,7 +103,7 @@ if (_uid call isAdmin) then
 					_x setVariable["cmoney",0,true];
 				};
 			}forEach playableUnits;
-			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]];
 		};
 		case 6: //Remove All Weapons
 		{

@@ -49,8 +49,8 @@ _packetKey = call compile (_assignPacketKey + "_mpPacketKey");
 		["A3W_fnc_clientFlagHandler", _assignChecksum, "server\antihack\clientFlagHandler.sqf"],
 		["A3W_fnc_chatBroadcast", _assignChecksum, "server\antihack\chatBroadcast.sqf"],
 		["A3W_fnc_adminMenuLog", _assignChecksum, "server\antihack\adminMenuLog.sqf"],
-		["A3W_fnc_logMemAnomaly", _assignChecksum, "server\antihack\logMemAnomaly.sqf"],
-		["notifyAdminMenu", _assignChecksum, "server\antihack\notifyAdminMenu.sqf"]
+		["A3W_fnc_logMemAnomaly", _assignChecksum, "server\antihack\logMemAnomaly.sqf"]
+		//["notifyAdminMenu", _assignChecksum, "server\antihack\notifyAdminMenu.sqf"]
 	];
 
 	if (isServer) then

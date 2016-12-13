@@ -83,7 +83,7 @@ case 2: {//addweapon
 		PG_set(MAGS,[]);
 		[GET_SELECTED_DATA(balca_WC_weaplist_IDC)] call PG_get(FNC_ADD_WEAPON);
 		PG_set(WEAPONS,weapons player);
-		if (!isNil "notifyAdminMenu") then { ["weapon", GET_SELECTED_DATA(balca_WC_weaplist_IDC)] call notifyAdminMenu };
+		//if (!isNil "notifyAdminMenu") then { ["weapon", GET_SELECTED_DATA(balca_WC_weaplist_IDC)] call notifyAdminMenu };
 	};
 
 case 3: {//ammo info
