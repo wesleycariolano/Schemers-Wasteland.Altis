@@ -188,8 +188,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Traitors Team Altis|ts3.ts3.traitors.com.br| Restart a cada 3 horas| "; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-		overviewText="TS:ts3.traitors.com.br WEBSITE: www.traitors.com.br";
+		briefingName="Schemers Team Altis|TS: schemersteam.hostzone.com | Restart a cada 3 horas| "; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+		overviewText="TS:schemersteam.hostzone.com WEBSITE: www.schemersteam.com";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0;
@@ -9697,7 +9697,7 @@ class Mission
 			dataType="Marker";
 			position[]={12144,1.7180358e+015,27650};
 			name="TS";
-			text=" TS: ts3.traitors.com.br";
+			text=" TS: schemersteam.hostzone.com.br";
 			type="mil_warning";
 			colorName="ColorRed";
 			id=636;

@@ -13,5 +13,5 @@ _player addRating 9999999;
 [] execVM "client\functions\playerActions.sqf";
 [] execVM "addons\vPin\init.sqf";    // Vehicle Pinlock script
 
-_player groupChat "Traitors Team - Inicialização Completa";
+_player groupChat "Schemers Team - Inicialização Completa";
 playerSetupComplete = true;

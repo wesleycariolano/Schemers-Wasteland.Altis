@@ -3,12 +3,12 @@ sleep 90;
 private ["_messages", "_timeout"];
 
 _messages = [
-	["Traitors Team", "A3Wasteland"],
+	["Schemers Team", "A3Wasteland"],
 	["Bem Vindo!", (name player)],
 	["A3Wasteland", worldName],
-	["Teamspeak", "ts3.traitors.com.br"],
-	["Website/Forums", "www.traitors.com.br"],
-	["Facebook", "www.facebook.com/traitorsteam/"]
+	["Teamspeak", "schemersteam.hostzone.com.br"],
+	["Website/Forums", "www.schemersteam.com"],
+	["Facebook", "www.facebook.com/schemersteam/"]
 
 ];
 
